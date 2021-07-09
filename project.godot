@@ -19,6 +19,10 @@ config/name="GMA"
 run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
 
+[editor_plugins]
+
+enabled=PoolStringArray( "godot-sqlite" )
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/Godot-MyAdmin/component/File.gd" type="Script" id=1]
+
+[node name="File" type="HBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+alignment = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 340.0
+margin_top = 193.0
+margin_right = 434.0
+margin_bottom = 207.0
+text = "Database File :"
+
+[node name="Database_file" type="LineEdit" parent="."]
+margin_left = 438.0
+margin_right = 588.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 150, 0 )
+
+[node name="New" type="Button" parent="."]
+margin_left = 592.0
+margin_right = 632.0
+margin_bottom = 400.0
+text = "New"
+
+[node name="Open" type="Button" parent="."]
+margin_left = 636.0
+margin_right = 683.0
+margin_bottom = 400.0
+text = "Open"
+
+[node name="FileDialog" type="FileDialog" parent="."]
+margin_left = 460.0
+margin_top = 200.0
+margin_right = 910.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 450, 400 )
+window_title = "Open a File"
+resizable = true
+mode = 0
+[connection signal="pressed" from="New" to="." method="_on_New_pressed"]
+[connection signal="pressed" from="Open" to="." method="_on_Open_pressed"]
+[connection signal="file_selected" from="FileDialog" to="." method="_on_FileDialog_file_selected"]

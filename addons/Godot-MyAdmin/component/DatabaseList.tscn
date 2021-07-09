@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/Godot-MyAdmin/component/DatabaseList.gd" type="Script" id=1]
+
+[node name="DatabaseList" type="VBoxContainer"]
+margin_right = 86.0
+margin_bottom = 572.0
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 86.0
+margin_bottom = 14.0
+text = "Database List"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TableName" type="LineEdit" parent="."]
+margin_top = 18.0
+margin_right = 86.0
+margin_bottom = 42.0
+
+[node name="Add" type="Button" parent="."]
+margin_top = 46.0
+margin_right = 86.0
+margin_bottom = 66.0
+text = "Add"
+
+[node name="Tree" type="Tree" parent="."]
+margin_top = 70.0
+margin_right = 86.0
+margin_bottom = 572.0
+rect_min_size = Vector2( 0, 300 )
+size_flags_vertical = 3
+[connection signal="pressed" from="Add" to="." method="_on_Add_pressed"]

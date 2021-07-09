@@ -1,0 +1,76 @@
+[gd_scene format=2]
+
+[node name="Operations" type="VBoxContainer"]
+margin_left = 98.0
+margin_right = 1024.0
+margin_bottom = 572.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContainer" type="TabContainer" parent="."]
+margin_right = 926.0
+margin_bottom = 572.0
+size_flags_vertical = 3
+tab_align = 0
+
+[node name="Structure" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Todo" type="Label" parent="TabContainer/Structure"]
+margin_right = 108.0
+margin_bottom = 14.0
+text = "Show table structure"
+
+[node name="Data" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Todo" type="Label" parent="TabContainer/Data"]
+margin_right = 108.0
+margin_bottom = 14.0
+text = "Show table data"
+
+[node name="SQL" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Todo" type="Label" parent="TabContainer/SQL"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Test SQL queries"
+
+[node name="Export" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Todo" type="Label" parent="TabContainer/Export"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Export to CSV
+Make dictionnary"
+__meta__ = {
+"_edit_use_anchors_": false
+}

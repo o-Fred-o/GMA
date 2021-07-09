@@ -1,15 +1,42 @@
-[gd_scene format=2]
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/Godot-MyAdmin/gma_main.gd" type="Script" id=1]
+[ext_resource path="res://addons/Godot-MyAdmin/component/File.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/Godot-MyAdmin/component/DatabaseList.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/Godot-MyAdmin/component/Operations.tscn" type="PackedScene" id=4]
 
 [node name="gma_main" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Main" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="File" parent="Main" instance=ExtResource( 2 )]
+
+[node name="Base" type="HBoxContainer" parent="Main"]
+margin_top = 28.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Main/Base"]
+margin_right = 1024.0
+margin_bottom = 572.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="DatabaseList" parent="Main/Base/HSplitContainer" instance=ExtResource( 3 )]
+
+[node name="Operations" parent="Main/Base/HSplitContainer" instance=ExtResource( 4 )]
