@@ -25,28 +25,46 @@ __meta__ = {
 margin_right = 1016.0
 margin_bottom = 20.0
 
-[node name="GetData" type="Button" parent="VBoxContainer/ActionsBar"]
-margin_right = 66.0
+[node name="Refresh" type="Button" parent="VBoxContainer/ActionsBar"]
+margin_right = 60.0
 margin_bottom = 20.0
-text = "Get data"
+text = "Refresh"
 
-[node name="Button2" type="Button" parent="VBoxContainer/ActionsBar"]
-margin_left = 70.0
-margin_right = 111.0
+[node name="AddLine" type="Button" parent="VBoxContainer/ActionsBar"]
+margin_left = 64.0
+margin_right = 128.0
 margin_bottom = 20.0
-text = "Save"
+text = "AddLine"
+
+[node name="SaveToDb" type="Button" parent="VBoxContainer/ActionsBar"]
+margin_left = 132.0
+margin_right = 213.0
+margin_bottom = 20.0
+text = "Save to DB"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
 margin_top = 24.0
 margin_right = 1016.0
-margin_bottom = 564.0
+margin_bottom = 546.0
 size_flags_vertical = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Table" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
-margin_bottom = 540.0
+margin_bottom = 522.0
 size_flags_vertical = 3
 
-[node name="Line" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/Table"]
+[node name="Pagination" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 550.0
+margin_right = 1016.0
+margin_bottom = 564.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NbRecords" type="Label" parent="VBoxContainer/Pagination"]
+margin_right = 1016.0
+margin_bottom = 14.0
+
+[connection signal="pressed" from="VBoxContainer/ActionsBar/AddLine" to="." method="_on_AddLine_pressed"]
