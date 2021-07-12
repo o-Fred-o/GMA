@@ -36,7 +36,7 @@ func _on_selected_table(db,table_name):
     db.query("PRAGMA table_info("+ table_name + ");")
     _structure_info(db.query_result)
     #get data from table with pagination
-    emit_signal("data_list",db.query_result)
+    emit_signal("data_list",db,table_name)
 
 ###################
 # Functions

@@ -22,7 +22,7 @@ func _ready():
     
     connect("open_database", tablelist_component, "_on_open_database")
     tablelist_component.connect("selected_table", structure_component, "_on_selected_table")
-    
+    structure_component.connect("data_list", data_component, "_on_data_list")
 
 func _on_database_selected(file):
     db.path = file
