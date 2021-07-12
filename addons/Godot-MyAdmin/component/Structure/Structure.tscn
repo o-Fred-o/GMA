@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/Godot-MyAdmin/component/Structure/Structure.gd" type="Script" id=1]
+
+[node name="Structure" type="Tabs"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fields" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ActionsBar" type="HBoxContainer" parent="Fields"]
+margin_right = 1016.0
+margin_bottom = 20.0
+
+[node name="Add" type="Button" parent="Fields/ActionsBar"]
+margin_right = 37.0
+margin_bottom = 20.0
+text = "Add"
+
+[node name="Remove" type="Button" parent="Fields/ActionsBar"]
+margin_left = 41.0
+margin_right = 105.0
+margin_bottom = 20.0
+text = "Remove"
+
+[node name="ApplyToDb" type="Button" parent="Fields/ActionsBar"]
+margin_left = 109.0
+margin_right = 197.0
+margin_bottom = 20.0
+text = "Apply to DB"
+
+[node name="FieldProp" type="VBoxContainer" parent="Fields"]
+margin_top = 24.0
+margin_right = 1016.0
+margin_bottom = 24.0
+
+[connection signal="pressed" from="Fields/ActionsBar/Add" to="." method="_on_Add_pressed"]
+[connection signal="pressed" from="Fields/ActionsBar/ApplyToDb" to="." method="_on_ApplyToDb_pressed"]

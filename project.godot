@@ -8,9 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Control",
+"class": "CSVEditor",
+"language": "GDScript",
+"path": "res://addons/file-editor/scripts/CSVEditor.gd"
+}, {
+"base": "HTTPRequest",
+"class": "GoogleTranslateAPI",
+"language": "GDScript",
+"path": "res://addons/file-editor/scripts/GoogleTranslatorAPI.gd"
+} ]
 _global_script_class_icons={
-
+"CSVEditor": "",
+"GoogleTranslateAPI": ""
 }
 
 [application]
@@ -21,7 +32,7 @@ config/icon="res://icon.png"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "godot-sqlite" )
+enabled=PoolStringArray( "res://addons/godot-sqlite/plugin.cfg" )
 
 [rendering]
 

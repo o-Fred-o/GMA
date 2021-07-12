@@ -14,38 +14,40 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="."]
 margin_left = 340.0
-margin_top = 193.0
+margin_top = 5.0
 margin_right = 434.0
-margin_bottom = 207.0
+margin_bottom = 19.0
 text = "Database File :"
 
 [node name="Database_file" type="LineEdit" parent="."]
 margin_left = 438.0
 margin_right = 588.0
-margin_bottom = 400.0
+margin_bottom = 24.0
 rect_min_size = Vector2( 150, 0 )
 
 [node name="New" type="Button" parent="."]
 margin_left = 592.0
 margin_right = 632.0
-margin_bottom = 400.0
+margin_bottom = 24.0
 text = "New"
 
 [node name="Open" type="Button" parent="."]
 margin_left = 636.0
 margin_right = 683.0
-margin_bottom = 400.0
+margin_bottom = 24.0
 text = "Open"
 
 [node name="FileDialog" type="FileDialog" parent="."]
-margin_left = 460.0
-margin_top = 200.0
-margin_right = 910.0
-margin_bottom = 600.0
-rect_min_size = Vector2( 450, 400 )
+margin_left = 485.0
+margin_right = 885.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 400, 300 )
+popup_exclusive = true
 window_title = "Open a File"
 resizable = true
 mode = 0
+filters = PoolStringArray( "*.db ; SQLite Database" )
+
 [connection signal="pressed" from="New" to="." method="_on_New_pressed"]
 [connection signal="pressed" from="Open" to="." method="_on_Open_pressed"]
 [connection signal="file_selected" from="FileDialog" to="." method="_on_FileDialog_file_selected"]

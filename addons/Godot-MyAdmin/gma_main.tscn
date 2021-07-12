@@ -38,5 +38,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="DatabaseList" parent="Main/Base/HSplitContainer" instance=ExtResource( 3 )]
+margin_right = 150.0
+rect_min_size = Vector2( 150, 0 )
 
 [node name="Operations" parent="Main/Base/HSplitContainer" instance=ExtResource( 4 )]
+margin_left = 162.0
