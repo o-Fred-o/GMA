@@ -2,7 +2,7 @@
 
 [ext_resource path="res://addons/Godot-MyAdmin/gma_main.gd" type="Script" id=1]
 [ext_resource path="res://addons/Godot-MyAdmin/component/File.tscn" type="PackedScene" id=2]
-[ext_resource path="res://addons/Godot-MyAdmin/component/DatabaseList.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/Godot-MyAdmin/component/TableList.tscn" type="PackedScene" id=3]
 [ext_resource path="res://addons/Godot-MyAdmin/component/Operations.tscn" type="PackedScene" id=4]
 
 [node name="gma_main" type="Control"]
@@ -37,7 +37,7 @@ margin_bottom = 572.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="DatabaseList" parent="Main/Base/HSplitContainer" instance=ExtResource( 3 )]
+[node name="TableList" parent="Main/Base/HSplitContainer" instance=ExtResource( 3 )]
 margin_right = 150.0
 rect_min_size = Vector2( 150, 0 )
 

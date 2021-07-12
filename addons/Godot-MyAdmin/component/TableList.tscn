@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://addons/Godot-MyAdmin/component/DatabaseList.gd" type="Script" id=1]
+[ext_resource path="res://addons/Godot-MyAdmin/component/TableList.gd" type="Script" id=1]
 
 [node name="DatabaseList" type="VBoxContainer"]
 margin_right = 86.0
@@ -33,9 +33,15 @@ text = "Add"
 [node name="Tree" type="Tree" parent="."]
 margin_top = 70.0
 margin_right = 86.0
-margin_bottom = 572.0
+margin_bottom = 548.0
 rect_min_size = Vector2( 0, 300 )
 size_flags_vertical = 3
 
+[node name="Remove" type="Button" parent="."]
+margin_top = 552.0
+margin_right = 86.0
+margin_bottom = 572.0
+text = "Remove"
 [connection signal="pressed" from="Add" to="." method="_on_Add_pressed"]
 [connection signal="item_selected" from="Tree" to="." method="_on_Tree_item_selected"]
+[connection signal="pressed" from="Remove" to="." method="_on_Remove_pressed"]

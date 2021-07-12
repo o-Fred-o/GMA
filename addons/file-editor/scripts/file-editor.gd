@@ -6,23 +6,23 @@ var IconLoader = preload("res://addons/file-editor/scripts/IconLoader.gd").new()
 var FileEditor
 
 func _enter_tree():
-	add_autoload_singleton("LastOpenedFiles","res://addons/file-editor/scripts/LastOpenedFiles.gd")
-	FileEditor = preload("../scenes/FileEditor.tscn").instance()
-	get_editor_interface().get_editor_viewport().add_child(FileEditor)
-	FileEditor.hide()
+    add_autoload_singleton("LastOpenedFiles","res://addons/file-editor/scripts/LastOpenedFiles.gd")
+    FileEditor = preload("../scenes/FileEditor.tscn").instance()
+    get_editor_interface().get_editor_viewport().add_child(FileEditor)
+    FileEditor.hide()
 
 func _exit_tree():
-	remove_autoload_singleton("LastOpenedFiles")
-	get_editor_interface().get_editor_viewport().remove_child(FileEditor)
+    remove_autoload_singleton("LastOpenedFiles")
+    get_editor_interface().get_editor_viewport().remove_child(FileEditor)
 
 func has_main_screen():
-	return true
+    return true
 
 func get_plugin_name():
-	return "File"
+    return "File"
 
 func get_plugin_icon():
-	return IconLoader.load_icon_from_name("file")
+    return IconLoader.load_icon_from_name("file")
 
 func make_visible(visible):
-	FileEditor.visible = visible
+    FileEditor.visible = visible
