@@ -4,9 +4,6 @@ signal selected_table(database,table_name)
 
 var database
 
-func _ready():
-    pass
-
 ###################
 # Internal signals
 ###################

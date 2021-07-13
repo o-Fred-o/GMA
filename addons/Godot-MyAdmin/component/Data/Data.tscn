@@ -42,6 +42,12 @@ margin_right = 213.0
 margin_bottom = 20.0
 text = "Save to DB"
 
+[node name="Delete" type="Button" parent="VBoxContainer/ActionsBar"]
+margin_left = 217.0
+margin_right = 272.0
+margin_bottom = 20.0
+text = "Delete"
+
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
 margin_top = 24.0
 margin_right = 1016.0
@@ -66,5 +72,6 @@ __meta__ = {
 [node name="NbRecords" type="Label" parent="VBoxContainer/Pagination"]
 margin_right = 1016.0
 margin_bottom = 14.0
-
+[connection signal="pressed" from="VBoxContainer/ActionsBar/Refresh" to="." method="_on_Refresh_pressed"]
 [connection signal="pressed" from="VBoxContainer/ActionsBar/AddLine" to="." method="_on_AddLine_pressed"]
+[connection signal="pressed" from="VBoxContainer/ActionsBar/Delete" to="." method="_on_Delete_pressed"]
