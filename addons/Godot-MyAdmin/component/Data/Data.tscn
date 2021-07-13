@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://addons/Godot-MyAdmin/component/Data/Data.gd" type="Script" id=1]
 [ext_resource path="res://addons/Godot-MyAdmin/assets/dash-circle.svg" type="Texture" id=2]
 [ext_resource path="res://addons/Godot-MyAdmin/assets/plus-circle.svg" type="Texture" id=3]
 [ext_resource path="res://addons/Godot-MyAdmin/assets/arrow-repeat.svg" type="Texture" id=4]
+[ext_resource path="res://addons/Godot-MyAdmin/assets/skip-backward-circle.svg" type="Texture" id=5]
+[ext_resource path="res://addons/Godot-MyAdmin/assets/skip-end-circle.svg" type="Texture" id=6]
 
 [node name="Data" type="Tabs"]
 anchor_right = 1.0
@@ -57,27 +59,72 @@ icon = ExtResource( 2 )
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
 margin_top = 26.0
 margin_right = 1016.0
-margin_bottom = 546.0
+margin_bottom = 538.0
 size_flags_vertical = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Table" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
-margin_bottom = 520.0
+margin_bottom = 512.0
 size_flags_vertical = 3
 
 [node name="Pagination" type="VBoxContainer" parent="VBoxContainer"]
-margin_top = 550.0
+margin_top = 542.0
 margin_right = 1016.0
 margin_bottom = 564.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="NbRecords" type="Label" parent="VBoxContainer/Pagination"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Pagination"]
 margin_right = 1016.0
-margin_bottom = 14.0
+margin_bottom = 22.0
+
+[node name="First" type="Button" parent="VBoxContainer/Pagination/HBoxContainer"]
+margin_right = 28.0
+margin_bottom = 22.0
+icon = ExtResource( 5 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Prev" type="Button" parent="VBoxContainer/Pagination/HBoxContainer"]
+margin_left = 32.0
+margin_right = 60.0
+margin_bottom = 22.0
+icon = ExtResource( 5 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NbRecords" type="Label" parent="VBoxContainer/Pagination/HBoxContainer"]
+margin_left = 64.0
+margin_top = 4.0
+margin_right = 64.0
+margin_bottom = 18.0
+
+[node name="Next" type="Button" parent="VBoxContainer/Pagination/HBoxContainer"]
+margin_left = 68.0
+margin_right = 96.0
+margin_bottom = 22.0
+icon = ExtResource( 6 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Last" type="Button" parent="VBoxContainer/Pagination/HBoxContainer"]
+margin_left = 100.0
+margin_right = 128.0
+margin_bottom = 22.0
+icon = ExtResource( 5 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="VBoxContainer/ActionsBar/Refresh" to="." method="_on_Refresh_pressed"]
 [connection signal="pressed" from="VBoxContainer/ActionsBar/AddLine" to="." method="_on_AddLine_pressed"]
 [connection signal="pressed" from="VBoxContainer/ActionsBar/Delete" to="." method="_on_Delete_pressed"]

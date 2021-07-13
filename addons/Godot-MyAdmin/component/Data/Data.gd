@@ -2,7 +2,7 @@ tool extends Tabs
 
 onready var container := $VBoxContainer/ScrollContainer
 onready var table := $VBoxContainer/ScrollContainer/Table
-onready var nbRecords := $VBoxContainer/Pagination/NbRecords
+onready var nbRecords := $VBoxContainer/Pagination/HBoxContainer/NbRecords
 
 # todo export vars ???
 var data_db

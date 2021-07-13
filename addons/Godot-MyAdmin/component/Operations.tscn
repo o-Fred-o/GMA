@@ -30,3 +30,4 @@ visible = false
 visible = false
 
 [node name="Export" parent="TabContainer" instance=ExtResource( 3 )]
+visible = false
