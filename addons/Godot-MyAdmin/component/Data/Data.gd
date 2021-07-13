@@ -1,4 +1,4 @@
-extends Tabs
+tool extends Tabs
 
 onready var container := $VBoxContainer/ScrollContainer
 onready var table := $VBoxContainer/ScrollContainer/Table
