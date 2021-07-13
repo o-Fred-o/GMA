@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://addons/Godot-MyAdmin/component/Data/Data.tscn" type="PackedScene" id=1]
 [ext_resource path="res://addons/Godot-MyAdmin/component/Structure/Structure.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/Godot-MyAdmin/component/Export/Export.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/Godot-MyAdmin/component/SQL/SQL.tscn" type="PackedScene" id=4]
 
 [node name="Operations" type="VBoxContainer"]
 margin_left = 98.0
@@ -24,34 +26,7 @@ tab_align = 0
 [node name="Data" parent="TabContainer" instance=ExtResource( 1 )]
 visible = false
 
-[node name="SQL" type="Tabs" parent="TabContainer"]
+[node name="SQL" parent="TabContainer" instance=ExtResource( 4 )]
 visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
 
-[node name="Todo" type="Label" parent="TabContainer/SQL"]
-margin_right = 40.0
-margin_bottom = 14.0
-text = "Test SQL queries"
-
-[node name="Export" type="Tabs" parent="TabContainer"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
-
-[node name="Todo" type="Label" parent="TabContainer/Export"]
-margin_right = 40.0
-margin_bottom = 14.0
-text = "Export to CSV
-Make dictionnary"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Export" parent="TabContainer" instance=ExtResource( 3 )]

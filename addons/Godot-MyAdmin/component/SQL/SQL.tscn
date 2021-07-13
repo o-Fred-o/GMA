@@ -1,0 +1,57 @@
+[gd_scene format=2]
+
+[node name="SQL" type="Tabs"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 1016.0
+margin_bottom = 14.0
+
+[node name="Todo" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_right = 108.0
+margin_bottom = 14.0
+text = "Test SQL queries"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 18.0
+margin_right = 1016.0
+margin_bottom = 118.0
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/HBoxContainer2"]
+margin_right = 1016.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 122.0
+margin_right = 1016.0
+margin_bottom = 142.0
+
+[node name="Execute" type="Button" parent="VBoxContainer/HBoxContainer3"]
+margin_right = 62.0
+margin_bottom = 20.0
+text = "Execute"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 146.0
+margin_right = 1016.0
+margin_bottom = 146.0
