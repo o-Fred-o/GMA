@@ -1,0 +1,22 @@
+[gd_scene format=2]
+
+[node name="TaskItem" type="HBoxContainer"]
+margin_right = 1014.0
+margin_bottom = 24.0
+
+[node name="Description" type="LineEdit" parent="."]
+margin_right = 897.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+
+[node name="Add" type="Button" parent="."]
+margin_left = 902.0
+margin_right = 942.0
+margin_bottom = 24.0
+text = "Add"
+
+[node name="Remove" type="Button" parent="."]
+margin_left = 947.0
+margin_right = 1014.0
+margin_bottom = 24.0
+text = "Remove"

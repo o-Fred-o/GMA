@@ -1,11 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://addons/Godot-MyAdmin/component/Data/Data.gd" type="Script" id=1]
-[ext_resource path="res://addons/Godot-MyAdmin/assets/dash-circle.svg" type="Texture" id=2]
-[ext_resource path="res://addons/Godot-MyAdmin/assets/plus-circle.svg" type="Texture" id=3]
-[ext_resource path="res://addons/Godot-MyAdmin/assets/arrow-repeat.svg" type="Texture" id=4]
-[ext_resource path="res://addons/Godot-MyAdmin/assets/skip-backward-circle.svg" type="Texture" id=5]
-[ext_resource path="res://addons/Godot-MyAdmin/assets/skip-end-circle.svg" type="Texture" id=6]
+[ext_resource path="res://addons/Godot-MyAdmin/assets/dash-circle.png" type="Texture" id=2]
+[ext_resource path="res://addons/Godot-MyAdmin/assets/skip-begin-circle.png" type="Texture" id=3]
+[ext_resource path="res://addons/Godot-MyAdmin/assets/plus-circle.png" type="Texture" id=4]
+[ext_resource path="res://addons/Godot-MyAdmin/assets/save.png" type="Texture" id=5]
+[ext_resource path="res://addons/Godot-MyAdmin/assets/arrow-repeat.png" type="Texture" id=6]
+[ext_resource path="res://addons/Godot-MyAdmin/assets/skip-backward-circle.png" type="Texture" id=7]
+[ext_resource path="res://addons/Godot-MyAdmin/assets/skip-forward-circle.png" type="Texture" id=8]
+[ext_resource path="res://addons/Godot-MyAdmin/assets/skip-end-circle.png" type="Texture" id=9]
 
 [node name="Data" type="Tabs"]
 anchor_right = 1.0
@@ -34,24 +37,25 @@ margin_bottom = 22.0
 margin_right = 78.0
 margin_bottom = 22.0
 text = "Refresh"
-icon = ExtResource( 4 )
+icon = ExtResource( 6 )
 
 [node name="AddLine" type="Button" parent="VBoxContainer/ActionsBar"]
 margin_left = 82.0
 margin_right = 164.0
 margin_bottom = 22.0
 text = "AddLine"
-icon = ExtResource( 3 )
+icon = ExtResource( 4 )
 
 [node name="SaveToDb" type="Button" parent="VBoxContainer/ActionsBar"]
 margin_left = 168.0
-margin_right = 249.0
+margin_right = 267.0
 margin_bottom = 22.0
 text = "Save to DB"
+icon = ExtResource( 5 )
 
 [node name="Delete" type="Button" parent="VBoxContainer/ActionsBar"]
-margin_left = 253.0
-margin_right = 326.0
+margin_left = 271.0
+margin_right = 344.0
 margin_bottom = 22.0
 text = "Delete"
 icon = ExtResource( 2 )
@@ -84,7 +88,7 @@ margin_bottom = 22.0
 [node name="First" type="Button" parent="VBoxContainer/Pagination/HBoxContainer"]
 margin_right = 28.0
 margin_bottom = 22.0
-icon = ExtResource( 5 )
+icon = ExtResource( 7 )
 align = 0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -94,7 +98,7 @@ __meta__ = {
 margin_left = 32.0
 margin_right = 60.0
 margin_bottom = 22.0
-icon = ExtResource( 5 )
+icon = ExtResource( 3 )
 align = 0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -110,7 +114,7 @@ margin_bottom = 18.0
 margin_left = 68.0
 margin_right = 96.0
 margin_bottom = 22.0
-icon = ExtResource( 6 )
+icon = ExtResource( 9 )
 align = 0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -120,11 +124,12 @@ __meta__ = {
 margin_left = 100.0
 margin_right = 128.0
 margin_bottom = 22.0
-icon = ExtResource( 5 )
+icon = ExtResource( 8 )
 align = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="VBoxContainer/ActionsBar/Refresh" to="." method="_on_Refresh_pressed"]
 [connection signal="pressed" from="VBoxContainer/ActionsBar/AddLine" to="." method="_on_AddLine_pressed"]
 [connection signal="pressed" from="VBoxContainer/ActionsBar/Delete" to="." method="_on_Delete_pressed"]

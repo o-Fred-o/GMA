@@ -1,4 +1,6 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/Godot-MyAdmin/component/SQL/SQL.gd" type="Script" id=1]
 
 [node name="SQL" type="Tabs"]
 anchor_right = 1.0
@@ -7,6 +9,7 @@ margin_left = 4.0
 margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -35,7 +38,7 @@ margin_top = 18.0
 margin_right = 1016.0
 margin_bottom = 118.0
 
-[node name="TextEdit" type="TextEdit" parent="VBoxContainer/HBoxContainer2"]
+[node name="Query" type="TextEdit" parent="VBoxContainer/HBoxContainer2"]
 margin_right = 1016.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 0, 100 )
@@ -54,4 +57,27 @@ text = "Execute"
 [node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 146.0
 margin_right = 1016.0
-margin_bottom = 146.0
+margin_bottom = 564.0
+size_flags_vertical = 3
+
+[node name="Result" type="TextEdit" parent="VBoxContainer/HBoxContainer4"]
+margin_right = 506.0
+margin_bottom = 418.0
+rect_min_size = Vector2( 0, 200 )
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/HBoxContainer4"]
+margin_left = 510.0
+margin_right = 1016.0
+margin_bottom = 418.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Table" type="VBoxContainer" parent="VBoxContainer/HBoxContainer4/ScrollContainer"]
+margin_bottom = 418.0
+size_flags_vertical = 3
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer3/Execute" to="." method="_on_Execute_pressed"]

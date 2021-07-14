@@ -36,9 +36,15 @@ margin_right = 105.0
 margin_bottom = 20.0
 text = "Remove"
 
-[node name="ApplyToDb" type="Button" parent="Fields/ActionsBar"]
+[node name="Rename" type="Button" parent="Fields/ActionsBar"]
 margin_left = 109.0
-margin_right = 197.0
+margin_right = 173.0
+margin_bottom = 20.0
+text = "Rename"
+
+[node name="ApplyToDb" type="Button" parent="Fields/ActionsBar"]
+margin_left = 177.0
+margin_right = 265.0
 margin_bottom = 20.0
 text = "Apply to DB"
 
@@ -46,5 +52,6 @@ text = "Apply to DB"
 margin_top = 24.0
 margin_right = 1016.0
 margin_bottom = 24.0
+
 [connection signal="pressed" from="Fields/ActionsBar/Add" to="." method="_on_Add_pressed"]
 [connection signal="pressed" from="Fields/ActionsBar/ApplyToDb" to="." method="_on_ApplyToDb_pressed"]
