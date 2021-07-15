@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://TodoList/TaskList.gd" type="Script" id=1]
+
+[node name="TaskList" type="HBoxContainer"]
+margin_top = 29.0
+margin_right = 1014.0
+margin_bottom = 561.0
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_right = 1014.0
+margin_bottom = 532.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TasksContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 1014.0
+size_flags_horizontal = 3

@@ -8,8 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Object",
+"class": "TaskModel",
+"language": "GDScript",
+"path": "res://TodoList/model/TaskModel.gd"
+} ]
 _global_script_class_icons={
+"TaskModel": ""
 }
 
 [application]

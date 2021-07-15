@@ -1,22 +1,30 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://TodoList/TaskItem.gd" type="Script" id=1]
 
 [node name="TaskItem" type="HBoxContainer"]
 margin_right = 1014.0
 margin_bottom = 24.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Description" type="LineEdit" parent="."]
-margin_right = 897.0
+margin_right = 905.0
 margin_bottom = 24.0
 size_flags_horizontal = 3
 
-[node name="Add" type="Button" parent="."]
-margin_left = 902.0
-margin_right = 942.0
+[node name="Add_Button" type="Button" parent="."]
+margin_left = 909.0
+margin_right = 946.0
 margin_bottom = 24.0
 text = "Add"
 
-[node name="Remove" type="Button" parent="."]
-margin_left = 947.0
+[node name="Remove_Button" type="Button" parent="."]
+margin_left = 950.0
 margin_right = 1014.0
 margin_bottom = 24.0
 text = "Remove"
+[connection signal="pressed" from="Add_Button" to="." method="_on_Add_Button_pressed"]
+[connection signal="pressed" from="Remove_Button" to="." method="_on_Remove_Button_pressed"]
