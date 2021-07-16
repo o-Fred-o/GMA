@@ -18,20 +18,20 @@ rect_min_size = Vector2( 150, 0 )
 
 [node name="Type" type="OptionButton" parent="."]
 margin_left = 154.0
-margin_right = 212.0
+margin_right = 237.0
 margin_bottom = 40.0
-text = "TEXT"
-items = [ "TEXT", null, false, 0, null, "INTEGER", null, false, 1, null, "BLOB", null, false, 2, null ]
+text = "INTEGER"
+items = [ "INTEGER", null, false, 0, null, "REAL", null, false, 1, null, "TEXT", null, false, 2, null, "CHAR", null, false, 3, null, "BLOB", null, false, 4, null ]
 selected = 0
 
 [node name="NotNull" type="CheckButton" parent="."]
-margin_left = 216.0
-margin_right = 292.0
+margin_left = 241.0
+margin_right = 317.0
 margin_bottom = 40.0
 
 [node name="PrimaryKey" type="CheckButton" parent="."]
-margin_left = 296.0
-margin_right = 372.0
+margin_left = 321.0
+margin_right = 397.0
 margin_bottom = 40.0
 
 [node name="AutoIncrement" type="CheckButton" parent="."]
@@ -47,6 +47,6 @@ margin_right = 452.0
 margin_bottom = 40.0
 
 [node name="Default" type="LineEdit" parent="."]
-margin_left = 376.0
-margin_right = 434.0
+margin_left = 401.0
+margin_right = 459.0
 margin_bottom = 40.0

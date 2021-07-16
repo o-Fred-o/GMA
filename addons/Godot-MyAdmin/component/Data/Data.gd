@@ -73,6 +73,12 @@ func _on_data_list(db,table_name):
     
     _refresh_table()
     
+func _on_reset():
+    #clear all lines and cells
+    for lines in table.get_children():
+        lines.queue_free()
+    cellNames = []
+    
 ###################
 # Functions
 ###################
@@ -93,11 +99,8 @@ func _add_line(data):
     table.add_child(myLine)
 
 func _refresh_table():
-    #clear all lines and cells
-    for lines in table.get_children():
-        lines.queue_free()
-    cellNames = []
-        
+    _on_reset()
+    
     #get cell list
     data_db.query("PRAGMA table_info("+ data_tablename + ");")
     #fisrt line with cells names

@@ -5,15 +5,18 @@ const TASK_ITEM := preload("res://TodoList/TaskItem.tscn")
 onready var list_container := $ScrollContainer/TasksContainer
 
 func _ready():
-    pass
+#connect signal from taskItem to TaskList
+    Events.connect("task_remove", self, "_remove_task_from_list")
+    Events.connect("task_add", self, "_add_task_to_list")
 
-func _add_task_to_list(task : TaskModel):
-    if !task.description.empty():
+###################
+# Functions
+###################
+
+func _add_task_to_list(_task : TaskModel):
         var task_item = TASK_ITEM.instance()
-        task_item.description=task.description
-        task_item.myTask=task
+        task_item.set_task(_task)
         list_container.add_child(task_item)
-        #ajoute la donne au modele
-        #mise a jour de l'id
-        #task.id=task_item.get_instance_id()
-        #myList.add_task(task)
+
+func _remove_task_from_list(_instance_id):
+    instance_from_id(_instance_id).queue_free()

@@ -52,6 +52,5 @@ text = "Apply to DB"
 margin_top = 24.0
 margin_right = 1016.0
 margin_bottom = 24.0
-
 [connection signal="pressed" from="Fields/ActionsBar/Add" to="." method="_on_Add_pressed"]
 [connection signal="pressed" from="Fields/ActionsBar/ApplyToDb" to="." method="_on_ApplyToDb_pressed"]

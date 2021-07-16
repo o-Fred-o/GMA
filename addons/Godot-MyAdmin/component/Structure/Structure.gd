@@ -7,7 +7,7 @@ var fieldProp = preload("res://addons/Godot-MyAdmin/component/Structure/FieldPro
 var data_db
 var data_tablename
 
-enum types  { TEXT ,  INTEGER , BLOB }
+enum types  { INTEGER , REAL , TEXT , CHAR , BLOB }
 
 signal data_list()
 signal sql_param()
@@ -24,10 +24,9 @@ func _on_Add_pressed():
 # https://www.sqlitetutorial.net/sqlite-alter-table/
 
 func _on_ApplyToDb_pressed():
+    #todo only add the last field
     var SQL_Query
     for child in fields.get_children():
-        #todo build the query
-        #ALTER TABLE equipment ADD COLUMN location text;
         var type_node = child.get_node("Type")
         var selected_type = type_node.get_selected_id()
         SQL_Query = "ALTER TABLE "+ data_tablename + " ADD COLUMN "  + child.get_node("Name").text +" " + type_node.get_item_text(selected_type) +";"
@@ -47,14 +46,17 @@ func _on_selected_table(db,table_name):
     emit_signal("data_list",data_db,data_tablename)
     emit_signal("sql_param",data_db,data_tablename)
 
+func _on_reset():
+    #clear all fieldProp children
+    for child in fields.get_children():
+        child.queue_free()
+
 ###################
 # Functions
 ###################
 
 func _structure_info(info):
-    #clear all fieldProp children
-    for child in fields.get_children():
-        child.queue_free()
+    _on_reset()
 
     #for each info
     for field in info:

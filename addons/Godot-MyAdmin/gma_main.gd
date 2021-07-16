@@ -25,6 +25,9 @@ func _ready():
     tablelist_component.connect("selected_table", structure_component, "_on_selected_table")
     structure_component.connect("data_list", data_component, "_on_data_list")
     structure_component.connect("sql_param", sql_component, "_on_sql_param")
+    #idem in export component to generate a dictionnaory for code
+    #tablelist_component.connect("selected_table", structure_component, "_on_selected_table")
+    
 
 func _on_database_selected(file):
     db.path = file
@@ -32,6 +35,9 @@ func _on_database_selected(file):
     
     db.open_db()
     emit_signal("open_database",db)
+    # reset all child components
+    structure_component._on_reset()
+    data_component._on_reset()
     
     
     #db.close_db()

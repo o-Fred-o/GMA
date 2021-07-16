@@ -17,6 +17,7 @@ margin_right = 1014.0
 margin_bottom = 532.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+scroll_horizontal_enabled = false
 
 [node name="TasksContainer" type="VBoxContainer" parent="ScrollContainer"]
 margin_right = 1014.0

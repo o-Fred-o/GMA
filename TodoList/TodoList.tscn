@@ -32,6 +32,7 @@ margin_right = 1019.0
 margin_bottom = 595.0
 
 [node name="TaskItem" parent="MarginContainer/VBoxContainer" instance=ExtResource( 2 )]
+is_editable = true
 
 [node name="TaskList" parent="MarginContainer/VBoxContainer" instance=ExtResource( 4 )]
 

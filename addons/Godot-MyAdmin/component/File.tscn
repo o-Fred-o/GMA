@@ -46,7 +46,7 @@ popup_exclusive = true
 window_title = "Open a File"
 resizable = true
 mode = 0
-filters = PoolStringArray( "*.db ; SQLite Database", "*.db ; SQLite Database" )
+filters = PoolStringArray( "*.db ; SQLite Database", "*.db ; SQLite Database", "*.db ; SQLite Database" )
 [connection signal="pressed" from="New" to="." method="_on_New_pressed"]
 [connection signal="pressed" from="Open" to="." method="_on_Open_pressed"]
 [connection signal="file_selected" from="FileDialog" to="." method="_on_FileDialog_file_selected"]
